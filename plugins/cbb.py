@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Creator : <a href='<b>\n○  ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/veldxd'>мɪкєʏ</a>\n○  ʟᴀɴɢᴜᴀɢᴇ : <code>Eng Sub & Dub</code>\n○  Main Channel : <a href=https://t.me/team_netflix>Team Netflix</a>\n○  Anime Channel : <a href=https://t.me/anime_cruise_netflix> Anime cruise</a>\n</b>",
+            text = f"<b>○ Creator : <a href='<b>\n○  ᴄʀᴇᴀᴛᴏʀ : <a href='https://t.me/Movies_Request_Group_One'>Tyson</a>\n○ Main Channel : <a href=https://t.me/Telugu_Movie_Room>Team Tyson</a>\n○",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
@@ -21,8 +21,8 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             )
         )
     elif data == "close":
-        await query.message.delete()
+        await query.message.delete(10)
         try:
-            await query.message.reply_to_message.delete()
+            await query.message.reply_to_message.delete(600)
         except:
             pass
